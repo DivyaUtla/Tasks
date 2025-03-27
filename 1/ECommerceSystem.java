@@ -24,6 +24,14 @@ class Cart{
             cartList.add(item); // adds the products to cart List
         }
 
+        //public void addProduct(Product item, double minPrice){  // to limit the cart items by price
+        //    if(item.price>minPrice){
+        //        cartList.add(item); // adds the products to cart List
+        //    }else{
+        //        System.out.println("Price is too low");
+        //    }
+        //}
+
         public double calculateTotalBill(){
             double total=0;
             for(Product item:cartList){ // this will through all the items in the Cart List
@@ -85,6 +93,10 @@ public class ECommerceSystem {
         c1.cart.addProduct(p1);
         c1.cart.addProduct(p2);
         //c1.cart.addProduct(p3);
+
+        //c1.cart.addProduct(p1,51000);  // we can limit the cart items with min price
+        //c1.cart.addProduct(p2, 1000);
+
         //System.out.println(c1.cart);
 
         Order o1=c1.placeOrder();
