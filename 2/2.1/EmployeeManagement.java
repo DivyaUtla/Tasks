@@ -6,7 +6,7 @@ class Employee{
     String empName;
     double salary;
 
-    public Employee(int empId,String empName,double salary){
+    public Employee(int empId,String empName,double salary){ // constructor to initialize emp details
         this.empId = empId;
         this.empName = empName;
         this.salary = salary;
@@ -16,12 +16,12 @@ class Employee{
 class Department{
     int depId;
     String depName;
-    List<Employee> employee;
+    List<Employee> employee; //empty emp list
 
-    public Department( int depId,String depName){
+    public Department( int depId,String depName){ //// constructor to initialize dept details
         this.depId=depId;
         this.depName=depName;
-        this.employee=new ArrayList<>();
+        this.employee=new ArrayList<>();  // this will holds the employees details of the department
     }
 
     public void addEmployee(Employee employees){
@@ -31,12 +31,13 @@ class Department{
     public void showDepartment(){
         System.out.println("Department Name : "+ depName);
         //System.out.println("Employees : ");
-        for(Employee emp:employee){
+        for(Employee emp:employee){ // this will through the all the emp details in department 
             System.out.println("Employee [ Id " + emp.empId + "| Name: "+emp.empName+ "| Salary: "+emp.salary+" ]");
             System.out.println();
         }
     }
 
+    // to limit the employees by their salary
     //public void showEmpSalaryLimit(double limit){
     //    System.out.println("Employees in " + depName + " with salary greater than " + limit + ":");
     //    for(Employee emp: employee){
@@ -58,22 +59,22 @@ class Department{
 
 class Company{
     String cmpName;
-    List<Department> departments;
+    List<Department> departments; //empty dep list
 
     public Company(String cmpName){
         this.cmpName=cmpName;
-        this.departments=new ArrayList<>();
+        this.departments=new ArrayList<>(); // this will holds the dept details of the company
     }
 
     public void addDepartment(Department dept){
         departments.add(dept);
     }
 
-    public void showCompany(){
+    public void showCompany(){ 
         System.out.println("Company Name : " + cmpName);
         System.out.println();
         //System.out.println("Departments : ");
-        for(Department dept:departments){
+        for(Department dept:departments){ // this will through the all the dept details in Company 
             dept.showDepartment();
         }
     }
@@ -88,7 +89,7 @@ class Company{
 
     public double calculateCompanyTotalSalary(){
         double total=0;
-        for(Department dept:departments){
+        for(Department dept:departments){ //Looping through all departments in the company
             total+=dept.calculateTotalSalary();
         }
         return total;
