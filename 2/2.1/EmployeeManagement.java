@@ -78,7 +78,7 @@ class Company{
         }
     }
 
-    //public void showCompanyLimit(double limit){
+    //public void showCompany(double limit){
     //    System.out.println("Company Name : " + cmpName);
     //    //System.out.println("Departments : ");
     //    for(Department dept:departments){
@@ -115,7 +115,7 @@ public class EmployeeManagement{
 
         company.showCompany();
 
-        //company.showCompanyLimit(limit);
+        //company.showCompany(limit);
         System.out.println("Total Salary :" + company.calculateCompanyTotalSalary());
 
     }
