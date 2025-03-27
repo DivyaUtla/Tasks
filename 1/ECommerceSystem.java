@@ -6,12 +6,15 @@ class Product{
     String name;
     double price;
 
-    public Product(int id, String name, double price){
+    public Product(int id, String name, double price){ //constructor to initialize products
         this.id=id;
         this.name=name;
         this.price=price;
     }
 
+    //public String toString(){ //used toString() to display product details in a readable format
+     //   return "Product: [ "+name+" Price: "+price + " ]";
+    //}
 }
 
 class Cart{
