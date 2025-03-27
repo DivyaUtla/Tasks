@@ -12,9 +12,6 @@ class Product{
         this.price=price;
     }
 
-    public String toString(){ //used toString() to display product details in a readable format
-        return "Product: [ "+name+" Price: "+price + " ]";
-    }
 }
 
 class Cart{
@@ -43,7 +40,7 @@ class Cart{
         public void showCart(){ // want to show all the products that are added in Cart List
             System.out.println("Cart Items: ");
             for(Product p:cartList){
-                System.out.println(p);
+                System.out.println("Product: [ "+p.name+" Price: "+p.price + " ]");
             }
         }
 }
