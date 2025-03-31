@@ -10,6 +10,11 @@ class Pet{
         this.petType=petType;
     }
 
+    public void showDetails(){
+        System.out.println("Pet Name: " + petName);
+        System.out.println("Pet Type: " + petType);
+    }
+
 }
 
 class Dog extends Pet{
@@ -20,10 +25,13 @@ class Dog extends Pet{
         this.favoriteToy=favoriteToy;
     }
 
-//at first i created diff method to show details of dog but instead we can go with @override
-    public void dogDetails(){
-        System.out.println("Pet Name: " + petName);
-        System.out.println("Pet Type: " + petType);
+//at first i created diff method to show details of pet but instead we can go with @override earlier it was public void dogDetails()
+@Override
+    public void showDetails(){
+        //System.out.println("Pet Name: " + petName);
+        //System.out.println("Pet Type: " + petType);
+
+        super.showDetails();
         System.out.println("Favorite Toy: " + favoriteToy);
         System.out.println();
     }
@@ -33,14 +41,17 @@ class Bird extends Pet{
     int wingSpan;
 
     public Bird(String petName, String petType, int wingSpan){
-        super(petName,petType);
+        super(petName,petType); 
         this.wingSpan=wingSpan;
     }
 
-//at first i created diff method to show details of bird but instead we can go with @override
-    public void birdDetails(){ 
-        System.out.println("Pet Name: " + petName);
-        System.out.println("Pet Type: " + petType);
+//at first i created diff method to show details of bird but instead we can go with @override earlier it was public void birdDetails()
+@Override
+    public void showDetails(){ 
+       // System.out.println("Pet Name: " + petName);
+       // System.out.println("Pet Type: " + petType);
+
+        super.showDetails();
         System.out.println("WingSpan: " + wingSpan);
         System.out.println();
     }
@@ -53,7 +64,10 @@ public class FavPet{
         List<Pet> pets=new ArrayList<>();
         pets.add(d1);
         pets.add(b1);
-        d1.dogDetails();
-        b1.birdDetails();
+        //d1.dogDetails();
+        //b1.birdDetails();
+        for(Pet p:pets){
+            p.showDetails();// Calls overridden methods in Dog and Bird
+        }
     }
 }
