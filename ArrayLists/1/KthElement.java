@@ -5,6 +5,11 @@ import java.util.Scanner;
 
 class FindSmallest{
     public static int FindKthSmallest(int[] arr, int k){
+        //Adding Edge case
+        if(k<1 || k>arr.length){
+            throw new IllegalArgumentException("K value is not valid");
+        }
+
         Arrays.sort(arr);
         return arr[k-1];
         
