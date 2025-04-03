@@ -1,8 +1,9 @@
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 
 class Dups{
     public static ArrayList<Integer> findDups(ArrayList<Integer> arr){
+        Collections.sort(arr);
         ArrayList<Integer> resultArray=new ArrayList<>(); 
         ArrayList<Integer> dupsArray=new ArrayList<>();// used to store dups
         
