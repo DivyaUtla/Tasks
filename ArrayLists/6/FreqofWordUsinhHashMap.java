@@ -18,7 +18,7 @@ class Frequency{
        }
 
        StringBuilder mapAsString = new StringBuilder();//created this to covert map data to readable format
-       for(String w:map.keySet()){ 
+       for(String w:map.keySet()){ //to get unique wrds used keyset()
         mapAsString.append(w).append(":").append(map.get(w)).append("\n");//here i/m appending each wrd and its frequwency
        }
 
