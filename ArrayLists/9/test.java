@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 class Dups{
     public static ArrayList<Integer> findDups(ArrayList<Integer> arr){
@@ -23,13 +24,6 @@ class Dups{
         }
     return resultArray;
     }
-
-    //int n=arr.size();
-    //    for (int i = 0; i < n; i++) {
-    //        if(!resultArray.contains(arr.get(i))){ // it will check and add to resarrray if the result array doesnt have have elements more than 1
-    //            resultArray.add(arr.get(i));
-    //        }
-    //    }
 }
 
 
