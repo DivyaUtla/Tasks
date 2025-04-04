@@ -23,7 +23,8 @@ class Dups{
                 resultArray.add(arr.get(i));
             }
         }
-    return resultArray;
+    //return dupsArray; {1,2}
+    return resultArray;//{3,4}
     }
 }
 

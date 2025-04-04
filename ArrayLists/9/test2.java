@@ -4,7 +4,7 @@
     //        if(!resultArray.contains(arr.get(i))){ // it will check and add to resarrray if the result array doesnt have have elements more than 1
     //            resultArray.add(arr.get(i));
     //        }
-    //    } //{11,2,3,4}
+    //    } //{1,2,3,4}
 
 
 
