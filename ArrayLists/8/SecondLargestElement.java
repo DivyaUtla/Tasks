@@ -6,7 +6,8 @@ import java.util.Collections;
 class Largest{
     public static int LargestElement(List<Integer> list){
         List<Integer> newList=new ArrayList<>(list);// created newList to store the elements from list
-        Collections.sort(newList, Collections.reverseOrder()); // i want the elemnts to be sorted in descending order so used Collections.reverseOrder()
+        Collections.reverse(newList);
+       // Collections.sort(newList, Collections.reverseOrder()); // i want the elemnts to be sorted in descending order so used Collections.reverseOrder()
     return newList.get(1); //since i need the second largest elements so im returning index 1
     }
 }
