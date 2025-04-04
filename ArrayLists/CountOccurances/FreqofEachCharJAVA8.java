@@ -7,7 +7,8 @@ public class FreqofEachCharJAVA8 {
         text=text.replaceAll("\\s+", "");
         return text.chars() // creates a stream of int (ASCII codes) //.stream() only works on: Collection types like List, Set, etc.
                         .mapToObj(element->(char) element) // convert to Character stream
-                            .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));// Function.identity() - group by character
+                            .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+                            // Function.identity() - group by character , u can also use e->e
     }
 
     public static void main(String[] args) {
