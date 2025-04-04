@@ -8,6 +8,7 @@ class FreqofEachWordusingJava8{
         List<String> words=Arrays.asList(text.split("\\s+"));
 
         Map<String,Long> freqOfEachElement=words.stream().collect(Collectors.groupingBy(word->word,Collectors.counting()));
+        //instead of word->word i can use function.identity() //When grouping items and want to group by the item itself.
 
         return freqOfEachElement.toString();
     }
