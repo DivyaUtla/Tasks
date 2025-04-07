@@ -1,0 +1,63 @@
+1. LocalDate (Represents a date without time)
+
+    LocalDate.now() //– Get the current date.
+
+    LocalDate.of(int year, int month, int dayOfMonth) //– Create a specific date.
+
+    LocalDate.parse(String text) //– Parse a date from a string.
+
+    plusDays(long daysToAdd), minusDays(long daysToSubtract) //– Add or subtract days.
+
+    isBefore(LocalDate other), isAfter(LocalDate other) //– Compare two dates.
+
+2. LocalTime (Represents a time without date)
+
+    LocalTime.now() //– Get the current time.
+
+    LocalTime.of(int hour, int minute) //– Create a specific time.
+
+    LocalTime.parse(String text) //– Parse a time from a string.
+
+    plusHours(long hoursToAdd), minusMinutes(long minutesToSubtract) //– Add or subtract hours, minutes, etc.
+
+    isBefore(LocalTime other), isAfter(LocalTime other) //– Compare two times.
+
+3. LocalDateTime (Represents both date and time without timezone)
+
+    LocalDateTime.now()//- Get the current date and time.
+
+    LocalDateTime.of(int year, int month, int day, int hour, int minute)//- Create a specific date and time.
+
+    LocalDateTime.parse(String text)//- Parse a date-time from a string.
+
+    plusDays(long daysToAdd), minusHours(long hoursToSubtract)//- Add or subtract days, hours, etc.
+
+    isBefore(LocalDateTime other), isAfter(LocalDateTime other)//- Compare two date-time instances.
+
+4.ZonedDateTime (Represents date and time with timezone)
+
+    ZonedDateTime.now()//- Get the current date and time with timezone.
+
+    ZonedDateTime.of(LocalDateTime dateTime, ZoneId zone)//- Create a ZonedDateTime from a LocalDateTime and a ZoneId.
+
+    plusDays(long daysToAdd), minusHours(long hoursToSubtract)//- Add or subtract time.
+
+    withZoneSameInstant(ZoneId zone)//- Convert to a different time zone while keeping the instant the same.
+
+    isBefore(ZonedDateTime other), isAfter(ZonedDateTime other)//- Compare two ZonedDateTime instances.
+
+5.Period (Represents a date-based amount of time)
+
+    Period.between(LocalDate startDateInclusive, LocalDate endDateExclusive) //- Calculate the period between two LocalDate instances.
+
+    Period.ofDays(int days), Period.ofMonths(int months) //- Create a Period from days or months.
+
+    plusYears(long yearsToAdd), minusMonths(long monthsToSubtract) //- Add or subtract years, months, etc.
+
+6.DateTimeFormatter (For formatting and parsing date-time objects)
+
+    DateTimeFormatter.ofPattern(String pattern) //- Create a formatter with a custom pattern.
+
+    dateTime.format(DateTimeFormatter formatter) //- Format a LocalDateTime or similar using the given formatter.
+
+    LocalDate.parse(String text, DateTimeFormatter formatter) //- Parse a LocalDate from a string using a formatter.
