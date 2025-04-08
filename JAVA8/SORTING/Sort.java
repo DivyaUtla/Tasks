@@ -20,10 +20,18 @@ class Employee{
 }
 
 public class Sort{
-    public static ArrayList<Employee> Sorting(ArrayList<Employee> employees){
-        ArrayList<Employee> resultArray=new ArrayList<>(employees);
+    public static ArrayList<Employee> Sorting(ArrayList<Employee> employees,double salaryLimit){
+       // ArrayList<Employee> resultArray=new ArrayList<>(employees);
+        ArrayList<Employee> resultArray=new ArrayList<>();
+//Limit by salary
+        for (Employee emp : employees) {
+            if (emp.empSalary > salaryLimit) {
+                resultArray.add(emp);
+            }
+        }
+
         Collections.sort(resultArray, Comparator.comparingDouble((Employee emp)->emp.empSalary)); //asecending order
-        Collections.sort(resultArray, Comparator.comparingDouble((Employee emp)->emp.empSalary).reversed());//desc
+        //Collections.sort(resultArray, Comparator.comparingDouble((Employee emp)->emp.empSalary).reversed());//desc
         return resultArray;
     }
 
@@ -34,7 +42,7 @@ public class Sort{
         employees.add(new Employee("Tinku", 10000));
         employees.add(new Employee("Lekhana", 25100));
         //arr.add(1); arr.add(4);arr.add(8);arr.add(2);arr.add(5);//arr={1,4,8,2,5}
-        ArrayList<Employee> sortedEmployees=Sorting(employees);
+        ArrayList<Employee> sortedEmployees=Sorting(employees,25000);
         for(Employee emp:sortedEmployees){
             System.out.println(emp);
         }
