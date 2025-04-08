@@ -12,8 +12,12 @@ public class FreqOfEachItemJava8 {
     }
 
     public static void main(String[] args) {
-        List<String> items=List.of("Pens", "books", "Candle", "Pens", "books","paper");
-        System.out.println(FrequencyOfEachItemJava8(items));
+        List<String> items1=List.of("Pens", "books", "Candle", "Pens", "books","paper");
+        List<Integer> items2=List.of(1,2,3,3,4,2,2,5,1);
+
+        System.out.println(FrequencyOfEachItemJava8(items1));
+        System.out.println();
+        System.out.println(FrequencyOfEachItemJava8(items2));
     }
    
 }
