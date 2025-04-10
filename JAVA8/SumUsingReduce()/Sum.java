@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 //reduce() is used to reduce a stream of elements into a single value — like sum, finding the product, concatenating strings, etc.
 
@@ -19,6 +20,17 @@ public class Sum {
         return words.stream().reduce("", (a,b)->a+b);
         //return words.stream().reduce("",String::concat);
     }
+
+//Max or Min Integer
+    public static int MaxOrMin(List<Integer> list, boolean flag){
+        int max= list.stream().reduce(Integer::max).orElseThrow();
+        int min= list.stream().reduce(Integer::min).orElseThrow();
+        if(!flag){
+            return min;
+        }else{
+            return max;
+        }
+    }    
         
 
     public static void main(String[] args) {
@@ -31,5 +43,9 @@ public class Sum {
         System.out.println("Sum : " + SumOfIntegers(list));
         System.out.println("Product : " + ProductOfIntegers(list));
         System.out.println("Concatenation : " + Concatenation(words));
+
+        boolean flag=false;
+        System.out.println((flag?"Max":"Min") + " Integer is : " + MaxOrMin(list, flag));
+
     }
 }
