@@ -30,6 +30,7 @@ public class SortJava8{
 
     //return employees.stream().filter((Employee emp)->emp.salary>25000).map((Employee emp)->emp.empName)
     //.collect(Collectors.toCollection(ArrayList::new)); //return only emp names used type ArrayList<String> instead of ArrayList<Employee>
+                                                        //in sortingusingjava8 and main methods
 
     //return employees.stream().sorted(Comparator.comparingDouble((Employee emp)->emp.salary).reversed()).limit(3)
     //.collect(Collectors.toCollection(ArrayList::new)); //limited to top 3 highest
