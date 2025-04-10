@@ -21,7 +21,7 @@ class Employee{
 
 public class Sort{
     public static ArrayList<Employee> Sorting(ArrayList<Employee> employees,double salaryLimit){
-       // ArrayList<Employee> resultArray=new ArrayList<>(employees);
+       //ArrayList<Employee> resultArray=new ArrayList<>(employees);
         ArrayList<Employee> resultArray=new ArrayList<>();
 //Limit by salary
         for (Employee emp : employees) {
@@ -32,6 +32,10 @@ public class Sort{
 
         Collections.sort(resultArray, Comparator.comparingDouble((Employee emp)->emp.empSalary)); //asecending order
         //Collections.sort(resultArray, Comparator.comparingDouble((Employee emp)->emp.empSalary).reversed());//desc
+
+        //Collections.sort(resultArray, Comparator.comparing((Employee emp)->emp.empName));//sort by emp name asec
+        //Collections.sort(resultArray, Comparator.comparing((Employee emp)->emp.empName).reversed());//sort by emp name  desc
+
         return resultArray;
     }
 
