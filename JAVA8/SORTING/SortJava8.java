@@ -20,7 +20,7 @@ class Employee{
 
 public class SortJava8{
     public static ArrayList<Employee> SortingUsingJava8(ArrayList<Employee> employees){  
-    return employees.stream().sorted(Comparator.comparingDouble((Employee emp)->emp.salary).reversed())
+    return employees.stream().sorted(Comparator.comparingDouble((Employee emp)->emp.salary))
                                                               .collect(Collectors.toCollection(ArrayList::new)); //asec
 
     //return employees.stream().sorted(Comparator.comparingDouble((Employee emp)->emp.salary).reversed())
