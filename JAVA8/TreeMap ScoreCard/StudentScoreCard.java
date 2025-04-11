@@ -3,12 +3,14 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class StudentScoreCard {
    TreeMap<Integer,List<String>> scoreCard=new TreeMap<>();//since The TreeMap will sort by the keys, so taken key as score and value as name.
+   // TreeMap<Integer,List<String>> scoreCard=new TreeMap<>(Comparator.reverseOrder());
 
    public void addStudent(String name,int score){
         scoreCard.computeIfAbsent(score, k->new ArrayList<>()).add(name);
@@ -28,13 +30,14 @@ public class StudentScoreCard {
     }
    }
 
+
    public static void main(String[] args) {
        StudentScoreCard system=new StudentScoreCard(); // Created a new instance of the StudentScoreCard class.
        system.addStudent("Divya", 99);
        system.addStudent("shanaya", 85);
        system.addStudent("jithin", 67);
        system.addStudent("naren", 45);
-       system.addStudent("Rupa", 99);
+       system.addStudent("Anshu", 99);
 
        system.ScoreCardSystem();
    }
